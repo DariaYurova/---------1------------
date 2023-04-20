@@ -1,0 +1,19 @@
+def sortirovka_list(my_list):
+    x = 0
+    for i in range(0,len(my_list)):
+        for j in range(0,len(my_list)):
+            if my_list[i]<my_list[j]:
+                x = my_list[i]
+                my_list[i] = my_list[j]
+                my_list[j] = x
+
+    return f"После сортировки по возрастанию: {my_list}"
+
+length = int(input("Введите, сколько цифр будет в Вашем списке:"))
+
+my_list = []
+for k in range(length):
+    element = int(input(f"Введите {k+1} число: "))
+    my_list.append(element)
+print(f"До сортировки: {my_list}")
+print(sortirovka_list(my_list=my_list))
